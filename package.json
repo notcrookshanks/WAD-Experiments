@@ -1,0 +1,24 @@
+{
+  "name": "wad-practicals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notcrookshanks/WAD-Experiments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/notcrookshanks/WAD-Experiments/issues"
+  },
+  "homepage": "https://github.com/notcrookshanks/WAD-Experiments#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
