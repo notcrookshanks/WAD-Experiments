@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600, initial-scale=1.0">
-    <title>WAD Practicals</title>
+    <title>Comment box</title>
 </head>
 <body>
-    <h1>Welcome bro</h1>
+    <h2>CREATE</h2>
+    <form action="/comments" method="POST">
+        <input name="comment" placeholder="Comment">
+        <button type="submit">CREATE</button>
+    </form>
+
+    <h2>READ</h2>
+    <form action="/comments" method="GET">
+        <button type="submit">READ</button>
+    </form>
+
+    <h2>UPDATE</h2>
+    <form action="/update" method="POST">
+        <input name="id" placeholder="id">
+        <input name="comment" placeholder="Comment">
+        <button type="submit">UPDATE</button>
+    </form>
+
+    <h2>DELETE</h2>
+    <form action="/comments" method="POST">
+        <input name="id" placeholder="id">
+        <button type="submit">DELETE</button>
+    </form>
 </body>
 </html>
