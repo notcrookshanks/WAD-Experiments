@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile User App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <header>
+        <h2>User App</h2>
+    </header>
+
+    <div class="container">
+        <button onclick="getUsers()">Load Users</button>
+        <div id="users"></div>
+
+        <form action="http://127.0.0.1:3000/blogs" method="POST">
+            <input name="blog" placeholder="Blog" required>
+            <input name="author" placeholder="Author" required>
+            <button type="submit">Add Blog</button>
+        </form>
+    </div>
+
+    <script>
+        async function getUsers() {
+            const response = await fetch(
+                "http://127.0.0.1:3000/blogs"
+            );
+            const data = await response.json();
+            let output = "";
+            data.forEach(user => {
+                output += `
+                    <div>
+                        <h3>${user.author}</h3>
+                        <p>Blog: <br> ${user.blog}</p>
+                    </div>
+                `;
+            });
+
+            document.getElementById("users").innerHTML = output;
+        }
+        getUsers();
+    </script>
+
+</body>
+</html>
